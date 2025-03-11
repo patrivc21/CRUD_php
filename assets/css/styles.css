@@ -1,0 +1,233 @@
+/* Estilos globales y reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #105b2e, #9af6ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* aplico transicicon */
+    animation: fadeInSlide 1s ease-in-out;
+}
+
+/* Animación para que el título aparezca suavemente */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #7ad29697;
+    color: #fff;
+    border: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eaeaea;
+    transition: background 0.3s ease-in-out;
+}
+
+
+a {
+    text-decoration: none;
+    color: #6c5ce7;
+}
+
+button {
+    padding: 8px 12px;
+    background: #105b2e;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #105b2e, #9af6ba);
+    transform: scale(1.05);
+}
+
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.formulario input:focus {
+    border-color: #105b2e;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.5);
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formulario {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.btn-agregar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #105b2e;
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-agregar::before {
+    content: "+";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-agregar:hover {
+    background: linear-gradient(135deg, #105b2e, #9af6ba);
+    transform: scale(1.05);
+}
+
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #105b2e, #9af6ba);
+    color: white;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-volver::before {
+    content: "⬅";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background: linear-gradient(135deg, #482ff7, #6c5ce7);
+    transform: scale(1.05);
+}
+
+.alinear {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
